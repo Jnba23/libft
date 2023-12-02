@@ -7,14 +7,15 @@ OBJM = $(SRCM:%.c=%.o)
 SRCB = ft_lstnew_bonus.c ft_lstadd_front_bonus.c ft_lstsize_bonus.c ft_lstlast_bonus.c ft_lstadd_back_bonus.c ft_lstdelone_bonus.c ft_lstclear_bonus.c ft_lstiter_bonus.c ft_lstmap_bonus.c
 OBJB = $(SRCB:%.c=%.o)
 NAME = libft.a
+HEADER = libft.h
 
 all : $(NAME)
 
-$(NAME) : $(OBJM)
+$(NAME) : $(OBJM) 
 	ar rcs $@ $^
 
-%.o : %.c libft.h
-	$(CC) -c $(CFLAGS) $< -o $@
+%.o : %.c $(HEADER)
+	$(CC) -c $(CFLAGS) $<
 
 bonus : $(OBJB)
 	ar rcs $(NAME) $^
