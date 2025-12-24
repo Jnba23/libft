@@ -29,6 +29,6 @@ A custom implementation of essential C standard library functions, built from sc
 ## 📦 Usage
 Clone and compile:
 ```sh
-git clone https://github.com/<your-username>/libft.git
+git clone https://github.com/jnba23/libft.git
 cd libft
 make
