@@ -6,7 +6,7 @@
 /*   By: asayad <asayad@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/13 15:24:25 by asayad            #+#    #+#             */
-/*   Updated: 2023/11/30 15:47:07 by asayad           ###   ########.fr       */
+/*   Updated: 2025/12/24 22:51:13 by asayad           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -75,7 +75,7 @@ char	**ft_split(const char *s, char c)
 		ar[k] = malloc((charcount(s, c, &i) + 1) * sizeof(char));
 		if (!ar[k])
 			return (allocfail(ar, k));
-		strlcpy(ar[k], s + i, charcount(s, c, &i) + 1);
+		ft_strlcpy(ar[k], s + i, charcount(s, c, &i) + 1);
 		k++;
 		i += charcount(s, c, &i);
 	}
